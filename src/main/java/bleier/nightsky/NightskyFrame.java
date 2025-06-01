@@ -7,7 +7,7 @@ import java.awt.*;
 
 public class NightskyFrame extends JFrame {
 
-    private JTextField location = new JTextField(but e20);
+    private JTextField location = new JTextField(20);
     private GeocodingService geocodingService;
     private PositionsService positionsService;
     private NightskyController controller;
