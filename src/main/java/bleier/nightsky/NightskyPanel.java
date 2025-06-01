@@ -12,7 +12,7 @@ public class NightskyPanel extends JPanel {
         setBackground(Color.BLACK);
     }
 
-    public void setPlanets(java.util.List<Planet> planets){
+    public void setPlanets(java.util.List<Planet> planets) {
         this.planets = planets;
     }
 
@@ -47,7 +47,7 @@ public class NightskyPanel extends JPanel {
                 int y = (int) ((90 - planet.getAltitude()) / 180.0 * getHeight());
 
                 g.setColor(Color.WHITE);
-                g.fillOval(x - 5, y -5, 10, 10);
+                g.fillOval(x - 5, y - 5, 10, 10);
                 g.setColor(Color.RED);
                 g.drawString(planet.getName(), x - 10, y - 10);
             }

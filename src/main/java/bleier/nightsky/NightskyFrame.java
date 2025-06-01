@@ -35,7 +35,8 @@ public class NightskyFrame extends JFrame {
         ApiKey appId = new ApiKey("applicationid");
         ApiKey appSecret = new ApiKey("applicationsecret");
 
-        controller = new NightskyController(geocodingService, positionsService, panel, location, apiKey, appId, appSecret);
+        controller = new NightskyController(geocodingService, positionsService,
+                panel, location, apiKey, appId, appSecret);
 
 
 

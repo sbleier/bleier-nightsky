@@ -22,7 +22,9 @@ public class NightskyController {
     private ApiKey appSecret;
     private NightskyPanel panel;
 
-    public NightskyController(GeocodingService service, PositionsService positionsService, NightskyPanel panel, JTextField location, ApiKey apiKey, ApiKey appId, ApiKey appSecret) {
+    public NightskyController(GeocodingService service, PositionsService positionsService,
+                              NightskyPanel panel, JTextField location, ApiKey apiKey,
+                              ApiKey appId, ApiKey appSecret) {
         this.geocodingService = service;
         this.positionsService = positionsService;
         this.panel = panel;
@@ -67,7 +69,7 @@ public class NightskyController {
         String time = now.format(DateTimeFormatter.ofPattern("HH:mm:ss"));
 
 
-        Disposable psDisposable = positionsService.positionsNow(lat, lon,"0", date, date, time, authHeader)
+        Disposable psDisposable = positionsService.positionsNow(lat, lon, "0", date, date, time, authHeader)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.from(SwingUtilities::invokeLater))
                 .subscribe(
