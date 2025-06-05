@@ -29,7 +29,7 @@ public class NightskyFrame extends JFrame {
 
 
 
-        geocodingService = new GeocodingServiceFactory().getGeocodingservice();
+        geocodingService = new GeocodingServiceFactory().getGeocodingService();
         positionsService = new PositionsServiceFactory().getPositionsService();
         ApiKey apiKey = new ApiKey();
         ApiKey appId = new ApiKey("applicationid");

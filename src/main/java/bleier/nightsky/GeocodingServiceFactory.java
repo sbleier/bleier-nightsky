@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class GeocodingServiceFactory {
 
-    public GeocodingService getGeocodingservice() {
+    public GeocodingService getGeocodingService() {
         Retrofit retrofit = new Retrofit.Builder()
                 //method calls
                 //server that we can connect to

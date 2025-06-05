@@ -13,8 +13,8 @@ public interface PositionsService {
                 @Query("latitude") String latitude,
                 @Query("longitude") String longitude,
                 @Query("elevation") String elevation,
-                @Query("from_date") String from_date,
-                @Query("to_date") String to_date,
+                @Query("from_date") String fromDate,
+                @Query("to_date") String toDate,
                 @Query("time") String time,
                 @Header("Authorization") String Authorization
         );

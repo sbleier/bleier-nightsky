@@ -4,21 +4,23 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.List;
 
-public class NightskyPanel extends JPanel {
+public class NightskyPanel extends JComponent {
 
     private List<Planet> planets;
 
     public NightskyPanel() {
-        setBackground(Color.BLACK);
     }
 
     public void setPlanets(java.util.List<Planet> planets) {
         this.planets = planets;
+        repaint();
     }
 
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
+        setBackground(Color.BLACK);
+        setOpaque(true);
         int width = getWidth();
         int height = getHeight();
 
