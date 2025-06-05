@@ -88,16 +88,6 @@ public class NightskyController {
                     response.data.table.rows[i].cells[0].position.horizontal.azimuth.degrees);
 
             planets.add(planet);
-            String id = response.data.table.rows[i].entry.id;
-            String name = response.data.table.rows[i].entry.name;
-            String altitude = response.data.table.rows[i].cells[0].position.horizontal.altitude.degrees;
-            String azimuth = response.data.table.rows[i].cells[0].position.horizontal.azimuth.degrees;
-
-            System.out.println("Planet from API response:");
-            System.out.println("  ID:       " + id);
-            System.out.println("  Name:     " + name);
-            System.out.println("  Altitude: " + altitude);
-            System.out.println("  Azimuth:  " + azimuth);
         }
         panel.setPlanets(planets);
         panel.repaint();

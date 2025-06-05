@@ -16,6 +16,6 @@ public interface PositionsService {
                 @Query("from_date") String fromDate,
                 @Query("to_date") String toDate,
                 @Query("time") String time,
-                @Header("Authorization") String Authorization
+                @Header("Authorization") String authorization
         );
 }

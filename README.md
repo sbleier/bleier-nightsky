@@ -26,7 +26,11 @@
 ## How It Works
 
 1. The user types a location into the input box.
+   ![Nightsky Screenshot](images/blankApp.png)
 2. The app sends a request to a geocoding service to get latitude and longitude.
+   ![Nightsky Screenshot](images/userInput.png)
 3. Using these coordinates, the app makes a second API call to fetch the positions of planets.
 4. The GUI draws the planets at their correct locations in the sky using their azimuth and altitude values.
+   ![Nightsky Screenshot](images/planets.png)
+
 ---

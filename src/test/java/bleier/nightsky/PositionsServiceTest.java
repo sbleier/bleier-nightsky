@@ -20,7 +20,13 @@ class PositionsServiceTest {
         String credentials = appId.get() + ":" + appSecret.get();
         String keyString = "Basic " + Base64.getEncoder().encodeToString(credentials.getBytes());
 
-        PositionsResponse response = service.positionsNow("40.538457", "-74.39450186737218", "0", ZonedDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")),  ZonedDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")), ZonedDateTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss")), keyString).blockingGet();
+        PositionsResponse response = service.positionsNow("40.538457",
+                "-74.39450186737218",
+                "0",
+                ZonedDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")),
+                ZonedDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")),
+                ZonedDateTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss")),
+                keyString).blockingGet();
 
         assertTrue(response.data.table.rows[0].entry.name.equals("Sun"));
 
